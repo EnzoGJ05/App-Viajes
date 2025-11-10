@@ -110,26 +110,3 @@ Proyecto personal — contacto: (agregá tu email o LinkedIn si querés)
 📄 Licencia
 
 App-Viajes — MIT License. Ver archivo LICENSE.
-
-
----
-
-# 7) Cómo añadir capturas (opcional, pero recomendable)
-1. Generá capturas en tu PC (ej. `captura_inicio.png`, `captura_cliente_menu.png`).  
-2. Copialas a `static/imagenes/` dentro del repo.  
-3. En el README (parte Capturas) ya está la referencia; ajusta nombres si difieren.
-
----
-
-# 8) Pasos para commitear y pushear los cambios (ya tenés repo en GitHub)
-
-Desde VS Code (GUI):
-1. Guardá todos los archivos.
-2. Source Control → escribí mensaje `Add README, LICENSE, CONTRIBUTING, docs` → ✔ Commit.
-3. Push (Publish Branch / Push) — si tu rama ya está publicada, sólo `Push`.
-
-Desde terminal (mínimo):
-```bash
-git add README.md LICENSE CONTRIBUTING.md requirements.txt .gitignore static/imagenes/*.png
-git commit -m "Add README, LICENSE and project docs"
-git push origin main
