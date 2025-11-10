@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Mis Viajes') }}{% endblock %}
+
+{% block content %}
+  <h1>🧾 {{ _('Mis Viajes') }}</h1>
+  {% if viajes %}
+    <table class="tabla">
+      <tr>
+        <th>ID</th>
+        <th>{{ _('Fecha') }}</th>
+        <th>{{ _('Hora') }}</th>
+        <th>{{ _('Estado') }}</th>
+        <th>{{ _('Acciones') }}</th>
+      </tr>
+      {% for v in viajes %}
+      <tr>
+        <td>{{ v[0] }}</td>
+        <td>{{ v[2] }}</td>
+        <td>{{ v[3] }}</td>
+        <td>{{ v[4] }}</td>
+        <td><a href="{{ url_for('usuario_cancelar', id=v[0]) }}" class="btn-cancelar">{{ _('Cancelar') }}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>{{ _('No tenés viajes registrados aún.') }}</p>
+  {% endif %}
+  <a href="{{ url_for('usuario_menu') }}" class="btn-Azul">← {{ _('Volver al menú') }}</a>
+{% endblock %}

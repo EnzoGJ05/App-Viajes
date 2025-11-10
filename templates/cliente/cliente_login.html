@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Iniciar sesión - Cliente') }}{% endblock %}
+{% block content %}
+  <h1>🔐 {{ _('Iniciar sesión') }}</h1>
+  <form method="POST">
+    <input type="text" name="dni" placeholder="{{ _('DNI') }}" required><br>
+    <input type="password" name="password" placeholder="{{ _('Contraseña') }}" required><br>
+    <button type="submit" class="btn">{{ _('Ingresar') }}</button>
+  </form>
+  <p>{{ _('¿No tenés cuenta?') }}</p>
+  <a href="{{ url_for('cliente_registro') }}" class="btn-volver">← {{ _('Registrate aquí') }}</a>
+  <a href="{{ url_for('index') }}" class="btn-Azul">← {{ _('Volver al inicio') }}</a>
+{% endblock %}

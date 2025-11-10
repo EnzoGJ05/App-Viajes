@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Solicitar Viaje') }}{% endblock %}
+
+{% block content %}
+  <h1>📅 {{ _('Solicitar un Viaje') }}</h1>
+  <form method="POST">
+    <label>{{ _('Fecha') }}:</label><br>
+    <input type="date" name="fecha" required><br><br>
+    <label>{{ _('Hora') }}:</label><br>
+    <input type="time" name="hora" required><br><br>
+    <button type="submit" class="btn">{{ _('Solicitar') }}</button>
+  </form>
+  <a href="{{ url_for('usuario_menu') }}" class="btn-Azul">← {{ _('Volver al menú') }}</a>
+{% endblock %}

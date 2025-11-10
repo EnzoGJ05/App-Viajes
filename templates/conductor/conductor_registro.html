@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}{{ _("Registro Conductor") }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ _("Registro de Conductor") }}</h2>
+
+    <form method="POST" action="{{ url_for('conductor_registro') }}" class="formulario" id="registroForm">
+        <label for="dni">{{ _("DNI") }}:</label>
+        <input type="text" id="dni" name="dni" required pattern="[0-9]+" title="{{ _('Solo números') }}">
+
+        <label for="password">{{ _("Contraseña") }}:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="nombre">{{ _("Nombre completo") }}:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÀ-ÿ\s]+" title="{{ _('Solo letras') }}">
+
+        <label for="telefono">{{ _("Teléfono") }}:</label>
+        <input type="text" id="telefono" name="telefono" required pattern="[0-9]+" title="{{ _('Solo números') }}">
+
+        <label for="vehiculo">{{ _("Vehículo") }}:</label>
+        <input type="text" id="vehiculo" name="vehiculo" required>
+
+        <label for="metodo_pago">{{ _("Método de pago preferido") }}:</label>
+        <select id="metodo_pago" name="metodo_pago" required>
+            <option value="">{{ _("Seleccionar") }}</option>
+            <option value="efectivo">{{ _("Efectivo") }}</option>
+            <option value="transferencia">{{ _("Transferencia") }}</option>
+            <option value="tarjeta">{{ _("Tarjeta") }}</option>
+        </select>
+
+        <button type="submit">{{ _("Registrar") }}</button>
+    </form>
+
+        <a href="{{ url_for('conductor_login') }}" class="btn">{{ _("¿No tenés cuenta?") }}</a>
+        <a href="{{ url_for('index') }}" class="btn">{{ _("Volver al inicio") }}</a>
+</div>
+
+<script>
+document.getElementById("registroForm").addEventListener("submit", function(event) {
+    const dni = document.getElementById("dni");
+    const nombre = document.getElementById("nombre");
+    const telefono = document.getElementById("telefono");
+    const metodo = document.getElementById("metodo_pago");
+
+    if (!dni.value.match(/^[0-9]+$/)) {
+        alert("⚠️ {{ _('El DNI solo debe contener números.') }}");
+        event.preventDefault();
+    } else if (!nombre.value.match(/^[A-Za-zÀ-ÿ\s]+$/)) {
+        alert("⚠️ {{ _('El nombre solo debe contener letras.') }}");
+        event.preventDefault();
+    } else if (!telefono.value.match(/^[0-9]+$/)) {
+        alert("⚠️ {{ _('El teléfono solo debe contener números.') }}");
+        event.preventDefault();
+    } else if (metodo.value === "") {
+        alert("⚠️ {{ _('Seleccioná un método de pago.') }}");
+        event.preventDefault();
+    }
+});
+</script>
+{% endblock %}

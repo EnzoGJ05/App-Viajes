@@ -1,0 +1,17 @@
+# Entorno virtual
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Archivos locales y bases de datos
+*.db
+viajes.db
+
+# Archivos de traducción compilados (opcional)
+translations/**/LC_MESSAGES/*.mo
+
+# Editor / sistema
+.vscode/
+.DS_Store
+Thumbs.db

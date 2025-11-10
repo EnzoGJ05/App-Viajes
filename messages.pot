@@ -1,0 +1,307 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-10-28 11:19-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app.py:193
+msgid "pending"
+msgstr ""
+
+#: app.py:195
+msgid "completed"
+msgstr ""
+
+#: app.py:197
+msgid "cancelled"
+msgstr ""
+
+#: templates/base.html:5 templates/index.html:3
+msgid "App de Viajes"
+msgstr ""
+
+#: templates/base.html:25 templates/cliente/usuario_ver_viajes.html:11
+#: templates/cliente/usuario_viaje.html:8
+msgid "Fecha"
+msgstr ""
+
+#: templates/base.html:26 templates/cliente/usuario_ver_viajes.html:12
+#: templates/cliente/usuario_viaje.html:10
+msgid "Hora"
+msgstr ""
+
+#: templates/index.html:6
+msgid "Bienvenido"
+msgstr ""
+
+#: templates/index.html:7
+msgid "Entrar como Usuario"
+msgstr ""
+
+#: templates/index.html:8
+msgid "Entrar como Conductor"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:3
+msgid "Iniciar sesión - Usuario"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:6
+msgid "Iniciar sesión"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:8
+#: templates/cliente/usuario_registro.html:16
+#: templates/conductor/conductor_login.html:9
+#: templates/conductor/conductor_registro.html:9
+msgid "DNI"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:9
+#: templates/cliente/usuario_registro.html:12
+#: templates/conductor/conductor_login.html:12
+#: templates/conductor/conductor_registro.html:12
+msgid "Contraseña"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:10
+#: templates/conductor/conductor_login.html:15
+msgid "Ingresar"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:12
+#: templates/conductor/conductor_login.html:19
+msgid "¿No tenés cuenta?"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:13
+#: templates/conductor/conductor_login.html:19
+msgid "Registrate aquí"
+msgstr ""
+
+#: templates/cliente/usuario_login.html:14
+#: templates/conductor/conductor_login.html:20
+#: templates/conductor/conductor_registro.html:37
+msgid "Volver al inicio"
+msgstr ""
+
+#: templates/cliente/usuario_menu.html:3
+msgid "Menú del Usuario"
+msgstr ""
+
+#: templates/cliente/usuario_menu.html:6
+msgid "Menú de Usuario"
+msgstr ""
+
+#: templates/cliente/usuario_menu.html:7 templates/cliente/usuario_viaje.html:3
+msgid "Solicitar Viaje"
+msgstr ""
+
+#: templates/cliente/usuario_menu.html:8
+msgid "Ver Mis Viajes"
+msgstr ""
+
+#: templates/cliente/usuario_menu.html:9
+#: templates/conductor/conductor_menu.html:12
+msgid "Cerrar sesión"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:5
+msgid "User Registration"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:8
+msgid "Name"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:8
+msgid "Only letters allowed"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:10
+msgid "Correo"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:14
+msgid "Numero de Telefono"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:14
+#: templates/cliente/usuario_registro.html:16
+msgid "Only numbers allowed"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:20
+msgid "Seleccione Metodo de Pago"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:31
+msgid "Register"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:35
+msgid "I already have an account"
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:54
+msgid "Name must contain only letters."
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:60
+msgid "Phone must contain only numbers."
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:66
+msgid "DNI must contain only numbers."
+msgstr ""
+
+#: templates/cliente/usuario_registro.html:72
+msgid "Please select a payment method."
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:3
+#: templates/cliente/usuario_ver_viajes.html:6
+msgid "Mis Viajes"
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:13
+msgid "Estado"
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:14
+msgid "Acciones"
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:22
+msgid "Cancelar"
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:27
+msgid "No tenés viajes registrados aún."
+msgstr ""
+
+#: templates/cliente/usuario_ver_viajes.html:29
+#: templates/cliente/usuario_viaje.html:14
+msgid "Volver al menú"
+msgstr ""
+
+#: templates/cliente/usuario_viaje.html:6
+msgid "Solicitar un Viaje"
+msgstr ""
+
+#: templates/cliente/usuario_viaje.html:12
+msgid "Solicitar"
+msgstr ""
+
+#: templates/conductor/conductor_login.html:2
+#: templates/conductor/conductor_registro.html:6
+msgid "Registro de Conductor"
+msgstr ""
+
+#: templates/conductor/conductor_login.html:6
+msgid "Iniciar Sesión Conductor"
+msgstr ""
+
+#: templates/conductor/conductor_login.html:10
+#: templates/conductor/conductor_registro.html:10
+#: templates/conductor/conductor_registro.html:19
+msgid "Solo números"
+msgstr ""
+
+#: templates/conductor/conductor_menu.html:2
+msgid "Menú Conductor"
+msgstr ""
+
+#: templates/conductor/conductor_menu.html:6
+msgid "Bienvenido, Conductor"
+msgstr ""
+
+#: templates/conductor/conductor_menu.html:9
+msgid "Ver viajes disponibles"
+msgstr ""
+
+#: templates/conductor/conductor_menu.html:10
+msgid "Historial de viajes"
+msgstr ""
+
+#: templates/conductor/conductor_menu.html:11
+msgid "Editar perfil"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:2
+msgid "Registro Conductor"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:15
+msgid "Nombre completo"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:16
+msgid "Solo letras"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:18
+msgid "Teléfono"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:21
+msgid "Vehículo"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:24
+msgid "Método de pago preferido"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:26
+msgid "Seleccionar"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:27
+msgid "Efectivo"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:28
+msgid "Transferencia"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:29
+msgid "Tarjeta"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:32
+msgid "Registrar"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:36
+msgid "Ya tengo cuenta"
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:49
+msgid "El DNI solo debe contener números."
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:52
+msgid "El nombre solo debe contener letras."
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:55
+msgid "El teléfono solo debe contener números."
+msgstr ""
+
+#: templates/conductor/conductor_registro.html:58
+msgid "Seleccioná un método de pago."
+msgstr ""
+

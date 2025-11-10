@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login-container">
+    <div class="login-box">
+        <h2>📝 {{ _("User Registration") }}</h2>
+
+        <form id="registerForm" method="POST" action="{{ url_for('usuario_registro') }}">
+            <input type="text" name="nombre" placeholder="{{ _('Name') }}" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="{{ _('Only letters allowed') }}">
+            
+            <input type="email" name="email" placeholder="{{ _('Correo') }}" required>
+            
+            <input type="password" name="password" placeholder="{{ _('Contraseña') }}" required>
+            
+            <input type="text" name="telefono" placeholder="{{ _('Numero de Telefono') }}" required pattern="[0-9]+" title="{{ _('Only numbers allowed') }}">
+            
+            <input type="text" name="dni" placeholder="{{ _('DNI') }}" required pattern="[0-9]+" title="{{ _('Only numbers allowed') }}">
+
+            <!-- Selector de tipo de cuenta -->
+            <select name="metodo_pago" required>
+                <option value="">{{ _('Seleccione Metodo de Pago') }}</option>
+                <option value="MercadoPago">MercadoPago</option>
+                <option value="Banco">Banco</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Contenedor para mensaje de error -->
+            <div id="errorMsg" class="error-msg" style="display:none;">
+                ❌ <span id="errorText"></span>
+            </div>
+
+            <button type="submit">{{ _('Register') }}</button>
+        </form>
+
+        <a href="{{ url_for('usuario_login') }}" class="btn-Azul">
+            ← {{ _("I already have an account") }}
+        </a>
+    </div>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+    const nombre = this.nombre.value.trim();
+    const telefono = this.telefono.value.trim();
+    const dni = this.dni.value.trim();
+    const metodo = this.metodo_pago.value;
+    const errorBox = document.getElementById("errorMsg");
+    const errorText = document.getElementById("errorText");
+    errorBox.style.display = "none";
+
+    const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    const soloNumeros = /^[0-9]+$/;
+
+    if (!soloLetras.test(nombre)) {
+        errorText.textContent = "{{ _('Name must contain only letters.') }}";
+        errorBox.style.display = "block";
+        event.preventDefault();
+        return;
+    }
+    if (!soloNumeros.test(telefono)) {
+        errorText.textContent = "{{ _('Phone must contain only numbers.') }}";
+        errorBox.style.display = "block";
+        event.preventDefault();
+        return;
+    }
+    if (!soloNumeros.test(dni)) {
+        errorText.textContent = "{{ _('DNI must contain only numbers.') }}";
+        errorBox.style.display = "block";
+        event.preventDefault();
+        return;
+    }
+    if (!metodo) {
+        errorText.textContent = "{{ _('Please select a payment method.') }}";
+        errorBox.style.display = "block";
+        event.preventDefault();
+        return;
+    }
+});
+</script>
+{% endblock %}

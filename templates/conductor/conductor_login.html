@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ _("Registro de Conductor") }}{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ _("Iniciar Sesión Conductor") }}</h2>
+
+    <form method="POST" action="{{ url_for('conductor_login') }}" class="formulario">
+        <label for="dni">{{ _("DNI") }}:</label>
+        <input type="text" id="dni" name="dni" required pattern="[0-9]+" title="{{ _('Solo números') }}">
+
+        <label for="password">{{ _("Contraseña") }}:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">{{ _("Ingresar") }}</button>
+    </form>
+
+    <div class="acciones">
+        <p>{{ _("¿No tenés cuenta?") }} <a href="{{ url_for('conductor_registro') }}">{{ _("Registrate aquí") }}</a></p>
+        <a href="{{ url_for('index') }}">{{ _("Volver al inicio") }}</a>
+    </div>
+</div>
+{% endblock %}
