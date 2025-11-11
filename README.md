@@ -30,27 +30,6 @@ Funciones principales: registro, login, solicitar viaje, ver/cancelar viajes y s
 
 ---
 
-## 📁 Estructura del proyecto
-
-App-Viajes/
-├── app.py
-├── viajes.db
-├── requirements.txt
-├── templates/
-│ ├── base.html
-│ ├── index.html
-│ ├── cliente/
-│ └── conductor/
-├── static/
-│ ├── css/
-│ └── imagenes/
-├── translations/
-├── README.md
-└── LICENSE
-
-
----
-
 ## ⚙️ Requisitos (local)
 
 - Python 3.8+  
@@ -79,19 +58,6 @@ Las traducciones se encuentran en translations/ y se compilan con:
 
 pybabel compile -d translations
 
-🔐 Seguridad y notas
-
-No subas viajes.db en producción (añadilo a .gitignore si es sólo local).
-
-No uses app.secret_key en producción tal cual; usá variables de entorno.
-
-🖼️ Capturas (opcional)
-
-(Subí imágenes a static/imagenes/ y reemplazá los nombres si usás estas etiquetas)
-
-
-
-
 🛠️ Planes futuros / mejoras
 
 Panel admin y asignación automática de conductor
@@ -105,7 +71,7 @@ Tests unitarios y CI (GitHub Actions)
 📬 Autor
 
 Enzo Gutiérrez
-Proyecto personal — contacto: (agregá tu email o LinkedIn si querés)
+Proyecto personal
 
 📄 Licencia
 
