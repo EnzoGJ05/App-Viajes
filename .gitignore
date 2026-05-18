@@ -1,0 +1,11 @@
+# Entorno virtual
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.db
+*.mo
+
+# Editor / Sistema
+.vscode/

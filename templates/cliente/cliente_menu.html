@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Menú del Usuario') }}{% endblock %}
+
+{% block content %}
+  <h1>🚕 {{ _('Menú de Usuario') }}</h1>
+  <a href="{{ url_for('cliente_viaje') }}" class="btn">{{ _('Solicitar Viaje') }}</a>
+  <a href="{{ url_for('cliente_ver_viajes') }}" class="btn">{{ _('Ver Mis Viajes') }}</a>
+  <a href="{{ url_for('index') }}" class="btn-Azul">← {{ _('Cerrar sesión') }}</a>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{ _('App de Viajes') }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background: url('{{ url_for('static', filename='imagenes/fondo.jpg') }}') no-repeat center center fixed; background-size: cover;">
+
+  <!-- 🔹 LOGO CLICKEABLE -->
+<a href="{{ url_for('index') }}" class="home-icon">
+  <img src="{{ url_for('static', filename='imagenes/logo.png') }}" alt="Inicio">
+</a>
+
+  <!-- 🔹 SELECCIÓN DE IDIOMA -->
+  <div class="corner top-right idioma-box">
+    🌐 
+    <a href="{{ url_for('cambiar_idioma', lang='es') }}">Español</a> | 
+    <a href="{{ url_for('cambiar_idioma', lang='en') }}">English</a>
+  </div>
+
+  <!-- 🔹 FECHA Y HORA -->
+  <div class="corner top-right datetime-box">
+    <div>{{ _('Fecha') }}: {{ fecha }}</div>
+    <div>{{ _('Hora') }}: {{ hora }}</div>
+  </div>
+
+  <!-- 🔹 CONTENIDO DE CADA PÁGINA -->
+  <div class="center-box">
+    {% block content %}{% endblock %}
+  </div>
+
+</body>
+</html>

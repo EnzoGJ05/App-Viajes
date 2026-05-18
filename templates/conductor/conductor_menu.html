@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ _("Menú Conductor") }}{% endblock %}
+
+{% block content %}
+<div class="menu-container">
+    <h2>{{ _("Bienvenido, Conductor") }}</h2>
+
+    <ul class="menu-opciones">
+        <li><a href="#">{{ _("Ver viajes disponibles") }}</a></li>
+        <li><a href="#">{{ _("Historial de viajes") }}</a></li>
+        <li><a href="#">{{ _("Editar perfil") }}</a></li>
+        <li><a href="{{ url_for('index') }}">{{ _("Cerrar sesión") }}</a></li>
+    </ul>
+</div>
+{% endblock %}
